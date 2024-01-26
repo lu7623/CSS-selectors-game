@@ -1,0 +1,121 @@
+.levels {
+    height: 100%;
+    width: 25%;
+    @extend %font-prim;
+    @include font($size: 2rem, $color: $color-dark-2xl);
+    @extend %flex;
+}
+
+.levels-top {
+    @extend %flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+
+#levels-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 15px 0 35px;
+    overflow: hidden;
+    background: rgb(34, 173, 195);
+    background: linear-gradient(180deg, rgba(34, 173, 195, 1) 0%, rgba(187, 237, 244, 1) 100%);
+}
+
+.levels-heading {
+    @include font($size: 2.5rem, $color: $color-dark-2xl);
+    font-weight: 800;
+    margin: 0;
+}
+
+.level-list,
+.level-name {
+    @include font($size: 1.8rem, $color: $color-dark-xl);
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.level-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.level-name:hover {
+    color: bisque;
+}
+
+.level-list {
+    line-height: 2.2rem;
+    width: 100%;
+}
+
+.level-description {
+    @include font($size: 1.3rem, $color: $color-dark-xl);
+    background-color: rgba(240, 255, 255, 0.4);
+    padding: 3px;
+}
+
+.marked {
+    background-color: azure;
+}
+
+.level-checked {
+    text-decoration: underline;
+    color: bisque;
+}
+
+.level-description-hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+.level-description-open {
+    margin: 5px 0;
+}
+
+.green-check {
+    @include element($width: 4rem, $height: 2rem, $url: '../assets/green-check.png');
+    background-size: contain;
+}
+
+.yellow-check {
+    filter: hue-rotate(70deg);
+}
+
+.win,
+.last {
+    width: 400px;
+    height: 300px;
+    background-color: aliceblue;
+    position: absolute;
+    left: calc(50vw - 200px);
+    top: calc(50vh - 150px);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+
+.last {
+    height: 200px;
+    justify-content: space-evenly;
+}
+
+.win-heading {
+    @extend %font-prim;
+    @include font($size: 2rem, $weight: 800, $color: $color-primary);
+    text-align: center;
+}
+
+.party {
+    @include element($width: 40rem, $height: 25rem, $url: '../assets/party.gif');
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}

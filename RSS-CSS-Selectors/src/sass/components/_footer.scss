@@ -1,0 +1,26 @@
+.footer {
+    height: 60px;
+
+    background-color: $color-background;
+    @extend %flex;
+    justify-content: space-around;
+    @extend %font-prim;
+    @include font($size: 2rem, $color: $color-primary);
+}
+
+.gh-link {
+    display: block;
+    background-image: url('../assets/gh-logo.png');
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+}
+
+.rs-link {
+    display: block;
+    background-image: url('../assets/rs-logo.jpg');
+    width: 85px;
+    height: 40px;
+    background-size: cover;
+    border-radius: 2px;
+}

@@ -1,0 +1,32 @@
+.elem-heading {
+    @extend %flex;
+    justify-content: space-between;
+    padding: 2px 1rem;
+    border-radius: 1rem 1rem 0 0;
+    background-color: lightgray;
+}
+
+.row-number {
+    background-color: rgb(240, 239, 239);
+    width: 3rem;
+    text-align: center;
+    border-right: 8px solid rgba(240, 239, 239, 0);
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-row {
+    height: 26px;
+}
+.elem-content {
+    display: flex;
+}
+
+pre {
+    @extend %font-code;
+    @include font($size: 1.6rem, $color: $color-dark-2xl);
+    position: relative;
+}

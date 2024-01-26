@@ -1,0 +1,42 @@
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../assets/background5.jpg);
+    background-size: contain;
+}
+
+main {
+    width: 90vw;
+    height: calc(100vh - 110px);
+    @extend %flex;
+    margin: auto;
+    padding: 5px;
+}
+
+.game-container {
+    width: 75%;
+    height: 100%;
+}
+
+.code-container {
+    width: 100%;
+    height: 65%;
+    display: flex;
+}
+
+.wrapper {
+    height: 98%;
+    width: 98%;
+    background-color: #4ac2d5d2;
+    border-radius: 1rem;
+    @extend %flex;
+}
+
